@@ -4,6 +4,7 @@ import { ClerkExpressRequireAuth } from "@clerk/clerk-sdk-node";
 
 
 export const createChat = async (req, res) => {
+  console.log('Creating a Chat...');
   const userId = req.auth.userId;
   const { text } = req.body;
 
@@ -51,6 +52,7 @@ export const createChat = async (req, res) => {
 };
 
 export const getUserChats = async (req, res) => {
+  console.log('Getting User Chats...')
   const userId = req.auth.userId;
 
   try {
@@ -77,6 +79,7 @@ export const getChatById = async (req, res) => {
 };
 
 export const updateChat = async (req, res) => {
+  console.log('Updating Chat...')
   const userId = req.auth.userId;
 
   const { question, answer, img } = req.body;
