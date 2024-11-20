@@ -1,5 +1,6 @@
 import UserChats from "../models/userChats.js";
 
+
 export const getUserChats = async (req, res) => {
   const userId = req.auth.userId;
 

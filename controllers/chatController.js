@@ -2,6 +2,7 @@ import Chat from "../models/chat.js";
 import UserChats from "../models/userChats.js";
 import { ClerkExpressRequireAuth } from "@clerk/clerk-sdk-node";
 
+
 export const createChat = async (req, res) => {
   const userId = req.auth.userId;
   const { text } = req.body;

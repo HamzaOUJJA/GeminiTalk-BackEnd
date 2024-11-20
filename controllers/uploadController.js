@@ -1,4 +1,7 @@
 import ImageKit from "imagekit";
+import dotenv from 'dotenv';
+dotenv.config();
+
 
 const imagekit = new ImageKit({
   urlEndpoint: process.env.IMAGE_KIT_ENDPOINT,
