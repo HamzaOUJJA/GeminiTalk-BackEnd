@@ -18,7 +18,7 @@ const __dirname = path.dirname(__filename);
 
 app.use(
   cors({
-    origin: process.env.CLIENT_URI,
+    origin: process.env.CLIENT_URL,
     credentials: true,
   })
 );
@@ -27,7 +27,7 @@ app.use(express.json());
 
 const connect = async () => {
   try {
-    await mongoose.connect(process.env.MONGO);
+    await mongoose.connect(process.env.MONGODB_URI);
     console.log("Connected to MongoDB");
   } catch (err) {
     console.log(err);
